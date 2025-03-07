@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salary Prediction</title>
+        <!-- Link to the static CSS file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+        
+    <body>
+        <!-- <div class="main-container">
+            <h1>Salary Predictor</h1>
+            <p>This web application predicts a person's salary based on their age, gender, education level, years of experience, and job role.</p>
+            <p>Please enter the required information below:</p>
+        </div> -->
+        <div class="container">
+            <h2>Salary Prediction</h2>
+            <form id="prediction-form">
+                <label for="age">Age:(Age range should be between 15 to 100)</label>
+                <input type="number" id="age" name="age" min= "15" required>
+    
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+    
+                <label for="education">Education Level:</label>
+                <select id="education" name="education">
+                    <option value="1">High School</option>
+                    <option value="2">Bachelor's</option>
+                    <option value="3">Master's</option>
+                </select>
+    
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" min = "0" required>
+    
+                <label for="job_role">Job Role:</label>
+                <select id="job_role" name="job_role">
+                    <option value="Job Title_Back end Developer">Job Title_Back end Developer</option>
+                    <option value="Job Title_Content Marketing Manager">Job Title_Content Marketing Manager</option>
+                    <option value="Job Title_Data Analyst">Job Title_Data Analyst</option>
+                    <!-- Add other job roles here -->
+                </select>
+    
+                <button type="submit">Predict Salary</button>
+            </form>
+    
+            <h3>Predicted Salary: <span id="result"></span></h3>
+        </div>
+    
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+    </html>
+    
